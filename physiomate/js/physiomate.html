@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Physiomate Health Monitor</title>
+</head>
+<body>
+    <div class="container">
+        <main>
+
+            <!-- Heading of the Page -->
+            <div class="pagetitle">
+                <h1 id="title">
+                    <span>Physiomate Health Monitor</span>
+                </h1> 
+            </div>
+            <div id="status">
+                PRESS START TO BEGIN WORKOUT!
+            </div>
+            <!-- Information Panel -->
+            <!-- Icons are imported from icons.google.com -->
+            <section class="info">
+                <div class="container-heartrate"> 
+                    <!-- Heart Rate -->
+                    <div>
+                            <i class="material-icons">
+                            monitor_heart
+                            </i>
+                            <h1 id="hrtitle">
+                            HEART RATE
+                            </h1>
+                            <hr>
+
+                            <h1>BPM (Beats per minute)</h1>
+                                <h2 id="bpm">
+                                    <p>Place finger on sensor to <br>
+                                    measure your heart rate!</p>
+                                </h2>
+                            <br>
+                            <h1>Max BPM</h1>
+                                <div id="maxbpm"><div class="lds-heart" id="loading-heart"><div></div></div></div>
+                    </div>
+                </div>
+                <div class="container-timer">
+                    <!-- Timer -->
+                    <div>
+                        <i class="material-icons">
+                        timer
+                        </i>
+                        <h1 id="durationtitle">TIME ELAPSED</h1>
+                        <hr>
+                        <h1>Minutes</h1>
+                        <h2>
+                            <div class="timerdisplay">
+                            00:00:00
+                            </div>
+                        </h2>
+                    </div>
+                </div>
+
+            <div class="container-distance">
+                <!-- Distance -->
+                <div>
+                    <i class="material-icons">
+                        directions_run
+                    </i>
+                    <h1 id="distance">DISTANCE</h1>
+                    <hr>
+                    <h1>
+                        Total (km)
+                    </h1>
+                    <h2 id="distance-moved">
+                        Begin pedaling to get a <br>distance travelled!
+                    </h2>
+                    <br>
+                    <h1>
+                        RPM
+                    </h1>
+                    <h2 id="speed">
+                        Begin pedaling to get <br>your speed!
+                    </h2>
+                </div>
+            </div>
+
+            <div class="container-calories">
+                <!-- Calories -->
+                <div>
+                    <i class="material-icons">
+                        local_fire_department
+                    </i>
+                    <h1 id="calories">CALORIES</h1>
+                    <hr>
+                    <h1>
+                        Burned
+                    </h1>
+
+                    <h2 id="calorie-number">
+                        Begin workout to calculate calories!
+                    </h2>
+                        <br>
+                    <h1>
+                        Calories/Hour
+                    </h1>
+                    <h2 id="calphour">
+                        . . .
+                    </h2>
+                </div>
+            </div>
+            </section>
+
+            <!-- Buttons -->
+            <div class="buttons">
+                <button id="start" type="button"><h2>Start</h2></button>
+                <button id="pause" type="button"><h2>Pause</h2></button>
+                <button id="finish" type="button"><h2>Finish</h2></button>
+            </div>
+        </main>
+    </div>      
+
+    <script src="https://cdn.socket.io/4.5.3/socket.io.min.js"></script>
+
+<script src="./render.js">
+
+</script>
+</body>
+</html>
